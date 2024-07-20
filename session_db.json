@@ -1,0 +1,122 @@
+{
+  "sessions": [
+    {
+      "id": "5784446985:5784446985",
+      "data": {
+        "__scenes": {
+          "current": "adminScene",
+          "state": {}
+        },
+        "foundBooks": [
+          {
+            "fileName": "Математика 5 класс.pdf",
+            "fileLink": "https://api.telegram.org/file/bot7156685042:AAF1fY281SAxQbqnVTw3uGVtN4bR-Jmm0VI/documents/file_3.pdf",
+            "fileId": "BQACAgIAAxkBAAPMZpP05l6JtQ0NyTnMjIC8J9nWJskAApFKAAIZD5lINWYv5LZPuEs1BA"
+          },
+          {
+            "fileName": "Карточки_для_коррекции_знаний_Математика_10_11_класс.pdf",
+            "fileLink": "https://api.telegram.org/file/bot7156685042:AAF1fY281SAxQbqnVTw3uGVtN4bR-Jmm0VI/documents/file_26.pdf",
+            "fileId": "BQACAgIAAxkBAAICQGaVSesHg_k4M2OkdrPmZTLJ0P0bAAISVQACuBeoSDVaFVsBT_zINQQ"
+          },
+          {
+            "fileName": "Карточки_для_коррекции_знаний_Математика_8_9_класс.pdf",
+            "fileLink": "https://api.telegram.org/file/bot7156685042:AAF1fY281SAxQbqnVTw3uGVtN4bR-Jmm0VI/documents/file_27.pdf",
+            "fileId": "BQACAgIAAxkBAAICP2aVSevClBDDqU2Q60fTubNFcY6lAAIRVQACuBeoSMThRc7nMg3mNQQ"
+          },
+          {
+            "fileName": "Карточки_для_коррекции_знаний_Математика_7_класс.pdf",
+            "fileLink": "https://api.telegram.org/file/bot7156685042:AAF1fY281SAxQbqnVTw3uGVtN4bR-Jmm0VI/documents/file_28.pdf",
+            "fileId": "BQACAgIAAxkBAAICQWaVSesAAZWbSaBSa58q7J1vUj9CaQACFFUAArgXqEhdS3utyBOkFzUE"
+          },
+          {
+            "fileName": "Математика_карточки_для_коррекции_знаний_5_6_класс.pdf",
+            "fileLink": "https://api.telegram.org/file/bot7156685042:AAF1fY281SAxQbqnVTw3uGVtN4bR-Jmm0VI/documents/file_30.pdf",
+            "fileId": "BQACAgIAAxkBAAICRmaVSjbQ6CiUYLorJR2IwSTtL4KnAAIbVQACuBeoSCwvnCcoZY2INQQ"
+          }
+        ],
+        "awaitingScheduleDate": false
+      }
+    },
+    {
+      "id": "-1001208160530:5784446985",
+      "data": {
+        "__scenes": {}
+      }
+    },
+    {
+      "id": "-1001311038605:5784446985",
+      "data": {
+        "__scenes": {}
+      }
+    },
+    {
+      "id": "930105973:930105973",
+      "data": {
+        "__scenes": {
+          "current": "userScene",
+          "state": {},
+          "foundBooks": [
+            {
+              "fileName": "Математика 5 класс.pdf",
+              "fileLink": "https://api.telegram.org/file/bot7156685042:AAF1fY281SAxQbqnVTw3uGVtN4bR-Jmm0VI/documents/file_3.pdf",
+              "fileId": "BQACAgIAAxkBAAPMZpP05l6JtQ0NyTnMjIC8J9nWJskAApFKAAIZD5lINWYv5LZPuEs1BA"
+            },
+            {
+              "fileName": "Карточки_для_коррекции_знаний_Математика_10_11_класс.pdf",
+              "fileLink": "https://api.telegram.org/file/bot7156685042:AAF1fY281SAxQbqnVTw3uGVtN4bR-Jmm0VI/documents/file_26.pdf",
+              "fileId": "BQACAgIAAxkBAAICQGaVSesHg_k4M2OkdrPmZTLJ0P0bAAISVQACuBeoSDVaFVsBT_zINQQ"
+            },
+            {
+              "fileName": "Карточки_для_коррекции_знаний_Математика_8_9_класс.pdf",
+              "fileLink": "https://api.telegram.org/file/bot7156685042:AAF1fY281SAxQbqnVTw3uGVtN4bR-Jmm0VI/documents/file_27.pdf",
+              "fileId": "BQACAgIAAxkBAAICP2aVSevClBDDqU2Q60fTubNFcY6lAAIRVQACuBeoSMThRc7nMg3mNQQ"
+            },
+            {
+              "fileName": "Карточки_для_коррекции_знаний_Математика_7_класс.pdf",
+              "fileLink": "https://api.telegram.org/file/bot7156685042:AAF1fY281SAxQbqnVTw3uGVtN4bR-Jmm0VI/documents/file_28.pdf",
+              "fileId": "BQACAgIAAxkBAAICQWaVSesAAZWbSaBSa58q7J1vUj9CaQACFFUAArgXqEhdS3utyBOkFzUE"
+            },
+            {
+              "fileName": "Математика_карточки_для_коррекции_знаний_5_6_класс.pdf",
+              "fileLink": "https://api.telegram.org/file/bot7156685042:AAF1fY281SAxQbqnVTw3uGVtN4bR-Jmm0VI/documents/file_30.pdf",
+              "fileId": "BQACAgIAAxkBAAICRmaVSjbQ6CiUYLorJR2IwSTtL4KnAAIbVQACuBeoSCwvnCcoZY2INQQ"
+            },
+            {
+              "fileName": "Математика_Супермобильный_справочник.pdf",
+              "fileLink": "https://api.telegram.org/file/bot7156685042:AAF1fY281SAxQbqnVTw3uGVtN4bR-Jmm0VI/documents/file_36.pdf",
+              "fileId": "BQACAgIAAxkBAAICXGaVT1yxtdqC4nRM-xEAAb2R2S1uigACSFUAArgXqEhhTPSCAc9nFjUE"
+            },
+            {
+              "fileName": "Математика_карточки_для_коррекции_знаний_5_6_класс.pdf",
+              "fileLink": "https://api.telegram.org/file/bot7156685042:AAF1fY281SAxQbqnVTw3uGVtN4bR-Jmm0VI/documents/file_37.pdf",
+              "fileId": "BQACAgIAAxkBAAICW2aVT1znie-AonidCowOX3nWiYUHAAJHVQACuBeoSNFEaFGrXjy_NQQ"
+            },
+            {
+              "fileName": "Математика_Супермобильный_справочник.pdf",
+              "fileLink": "https://api.telegram.org/file/bot7156685042:AAF1fY281SAxQbqnVTw3uGVtN4bR-Jmm0VI/documents/file_40.pdf",
+              "fileId": "BQACAgIAAxkBAAICgGaWEK0PJ9mYj5ndYewXa_duu1bqAAJSSAACgN2xSLO1pZNFUP_fNQQ"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "-4212154317:5784446985",
+      "data": {
+        "__scenes": {}
+      }
+    },
+    {
+      "id": "-1002154781943:5784446985",
+      "data": {
+        "__scenes": {}
+      }
+    },
+    {
+      "id": "-1002154781943:1087968824",
+      "data": {
+        "__scenes": {}
+      }
+    }
+  ]
+}
