@@ -62,6 +62,7 @@ export class PostService {
             parse_mode: 'HTML',
           },
         );
+        
         await this.appService.markFileAsPosted(file.id);
       }
     } else {
