@@ -52,7 +52,7 @@ export class PostService {
         const caption =
           `📚 <b>${file.fileName}</b>\n\n` +
           // `🐣 <a href="https://t.me/malichata">Подписывайся на канал для малышей</a>\n` +
-          `🤖 <a href="https://t.me/LoraSher">Хочешь свой телеграмм-бот? ПИШИ!</a>`;
+          `🤖 <a href="https://t.me/botsolutionone/1">Хочешь свой телеграмм-бот? Канал с кейсами разработки</a>`;
 
         await ctx.telegram.sendDocument(
           process.env.CHAT_ID_UMNIZA,

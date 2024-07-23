@@ -18,7 +18,7 @@ export const actionBottons = ( ) => {
       Markup.button.callback('🕵️‍♀️ Я ищу учебник', 'search_book'),
       Markup.button.callback('💬 Я хочу попасть в чат', 'chat'),
       Markup.button.callback('💰 Нужна информация по рекламе', 'adv'),
-      Markup.button.callback('💵 Я хочу оформить подписку', 'subscribe'),
+      // Markup.button.callback('💵 Я хочу оформить подписку', 'subscribe'),
     ],
     { columns: 1 },
   );

@@ -1,9 +1,7 @@
 import { Injectable } from '@nestjs/common';
-import { Action, Ctx, Hears, On, Scene, SceneEnter } from 'nestjs-telegraf';
+import { Action, Ctx, On, Scene, SceneEnter } from 'nestjs-telegraf';
 import { CustomContext } from 'src/context/context';
-import { PostService } from 'src/services/post.service';
 import { actionBottons } from '../keyboards/keyboard';
-import { Markup } from 'telegraf';
 import { MessageService } from 'src/services/message.service';
 import { AppService } from 'src/services/app.service';
 import { SubscriptionService } from 'src/services/subscription.service';
