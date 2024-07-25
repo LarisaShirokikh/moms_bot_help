@@ -30,6 +30,7 @@ const sessions = new LocalSession({ database: 'session_db.json' });
       middlewares: [sessions.middleware()],
       token: process.env.BOT_TOKEN,
     }),
+
     ConfigModule.forRoot({ isGlobal: true }),
     TypeOrmModule.forRootAsync({
       imports: [ConfigModule],
@@ -58,4 +59,5 @@ const sessions = new LocalSession({ database: 'session_db.json' });
     SubscriptionService,
   ],
 })
+
 export class AppModule {}

@@ -21,9 +21,10 @@ interface SessionData extends Scenes.SceneSessionData {
   fileName?: string;
   fileLink: string;
   scheduledDate?: Date;
+  //state?: any;
 }
 
-// Определите кастомный контекст, который расширяет Scenes.SceneContext
+
 export interface CustomContext extends Scenes.SceneContext<SessionData> {
   session: Scenes.SceneSession<SessionData>; // Используйте SessionData в качестве типа данных сессии
 }

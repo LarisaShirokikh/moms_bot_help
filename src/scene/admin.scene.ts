@@ -1,27 +1,20 @@
 import { Injectable, UseGuards } from '@nestjs/common';
-import {
-  Action,
-  Ctx,
-  Hears,
-  On,
-  Scene,
-  SceneEnter,
-} from 'nestjs-telegraf';
+import { Action, Ctx, Hears, On, Scene, SceneEnter } from 'nestjs-telegraf';
 import { CustomContext } from 'src/context/context';
 import { bottonsForAdmin } from 'src/keyboards/keyboard';
 import { PostService } from 'src/services/post.service';
 import { Markup } from 'telegraf';
 import { MessageService } from 'src/services/message.service';
-import { getCalendarKeyboard } from 'src/lib/calendar';
-import { getTimeKeyboard } from 'src/lib/timeKeyboard';
-
+import { AppService } from 'src/services/app.service';
 
 @Injectable()
 @Scene('adminScene')
 export class AdminScene {
+  private donorChannelId: string;
   constructor(
     private readonly postService: PostService,
     private readonly messageService: MessageService,
+    private readonly appService: AppService,
   ) {}
 
   @SceneEnter()
@@ -42,6 +35,27 @@ export class AdminScene {
     }
   }
 
+  @Action('send_schedule_message')
+  async sendSchedule(@Ctx() ctx: CustomContext) {
+    const user = ctx.from;
+    const username = user.username || user.first_name;
+    await ctx.reply(`${username} Введите номер чата-донора`);
+    // ctx.scene.session.state = 'waiting_for_channel_id';
+  }
+
+  @Hears(/.+/)
+  async handleChannelInput(@Ctx() ctx: CustomContext) {
+    // if (ctx.scene.session.state === 'waiting_for_channel_id') {
+    const message = ctx.message as any;
+    if (message && message.text) {
+      this.donorChannelId = message.text;
+      //ctx.scene.session.state = null;
+      await ctx.reply(`ID канала-донора установлен: ${this.donorChannelId}`);
+      // await this.appService.collectAndLogMembers(this.donorChannelId);
+      //  }
+    }
+  }
+
   @Action('auto_post')
   async enterAutoPost(@Ctx() ctx: CustomContext) {
     const buttons = Markup.inlineKeyboard([
@@ -54,7 +68,7 @@ export class AdminScene {
 
   @Action('add_auto_post')
   async handleAddAutoPost(@Ctx() ctx: CustomContext) {
-    await this.postService.handleScheduledPost(ctx);
+    await this.postService.scheduleAutoPost(ctx);
     await ctx.replyWithHTML('Автопостинг запущен.');
     const user = ctx.from;
     const username = user.username || user.first_name;
@@ -91,4 +105,15 @@ export class AdminScene {
     }
   }
 
+  @Action('stop_auto_post')
+  async handleStopAutoPost(@Ctx() ctx: CustomContext) {
+    this.postService.stopAutoPost();
+    await ctx.replyWithHTML('Автопостинг остановлен.');
+    const user = ctx.from;
+    const username = user.username || user.first_name;
+    await ctx.reply(
+      `${username} Что что то еще будем делать?`,
+      bottonsForAdmin(),
+    );
+  }
 }

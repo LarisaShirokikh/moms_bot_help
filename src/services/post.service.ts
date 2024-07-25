@@ -2,13 +2,14 @@ import { Injectable, Logger } from '@nestjs/common';
 import { InjectBot } from 'nestjs-telegraf';
 import { Context, Telegraf } from 'telegraf';
 import { AppService } from './app.service';
+import * as schedule from 'node-schedule';
 
 //const chat_id = -1001311038605; умница это
-
 
 @Injectable()
 export class PostService {
   private readonly logger = new Logger(PostService.name);
+  private job: schedule.Job;
   constructor(
     @InjectBot() private readonly bot: Telegraf<Context>,
     private readonly appService: AppService,
@@ -36,11 +37,23 @@ export class PostService {
   //     await ctx.reply('Ошибка: файл не найден для опубликования.');
   //   }
   // }
+  async scheduleAutoPost(ctx: Context) {
+    // Планируем задачу на каждые 2 часа
+    this.job = schedule.scheduleJob('0 */2 * * *', async () => {
+      this.logger.log('Running scheduled post task');
+      await this.handleScheduledPost(ctx);
+    });
+  }
 
- 
+  stopAutoPost() {
+    if (this.job) {
+      this.job.cancel();
+      this.logger.log('Auto posting stopped.');
+    }
+  }
 
   async handleScheduledPost(ctx: Context) {
-    this.logger.log(`CHAT_ID_TEST: ${process.env.CHAT_ID_TEST}`);
+    this.logger.log(`CHAT_ID_UMNIZA: ${process.env.CHAT_ID_UMNIZA}`);
 
     const now = new Date();
     const currentHour = now.getHours();
@@ -62,13 +75,11 @@ export class PostService {
             parse_mode: 'HTML',
           },
         );
-        
+
         await this.appService.markFileAsPosted(file.id);
       }
     } else {
       console.log('Outside working hours. Skipping scheduled post.');
     }
   }
-
-
 }

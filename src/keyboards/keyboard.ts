@@ -7,6 +7,7 @@ export const bottonsForAdmin = () => {
       Markup.button.callback('🗂️ Добавить учебник', 'add_book'),
       Markup.button.callback('📅 Расписание', 'schedule'),
       Markup.button.callback('✍🏻 Запланировать пост', 'add_schedule'),
+      Markup.button.callback('📲 Запустить рассылку', 'send_schedule_message'),
     ],
     { columns: 1 },
   );

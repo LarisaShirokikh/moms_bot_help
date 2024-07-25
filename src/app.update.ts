@@ -17,10 +17,8 @@ export class AppUpdate {
       console.log(`Is Admin: ${isAdmin}`);
 
       if(isAdmin) {
-        console.log('Entering admin scene'); 
           await ctx.scene.enter('adminScene');
       } else {
-        console.log('Entering user scene');
         await ctx.scene.enter('userScene');
        
       }

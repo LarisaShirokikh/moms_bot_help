@@ -6,6 +6,7 @@ import { Subject } from '../Schemas/subject.entity';
 import { Class } from '../Schemas/class.entity';
 import { Photo } from '../Schemas/photo.entity';
 import { Post } from 'src/Schemas/post.entity';
+import axios from 'axios';
 
 @Injectable()
 export class AppService {
@@ -122,4 +123,6 @@ export class AppService {
     const newPost = this.postRepository.create(postData);
     await this.postRepository.save(newPost);
   }
+
+ 
 }
